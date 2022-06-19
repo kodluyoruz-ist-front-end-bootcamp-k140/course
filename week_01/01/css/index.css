@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #673ab7;
+    color: #fff;
+    padding: 20px;
+}
+
+ul.menu {
+    list-style: none;
+    display: flex;
+}
+.menu a {
+    margin-right: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+.contact {
+    padding: 50px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+}
