@@ -15,15 +15,88 @@ export function DataGrid() {
 
   const loadData = () => {
     setLoading(true)
-    fetch("https://jsonplaceholder.typicode.com/todos").then(x => x.json()).then(response => {
-      setItems(response)
-      setLoading(false)
+    fetch("https://jsonplaceholder.typicode.com/todos")
+      .then(x => x.json())
+      .then(response => {
+        setItems(response)
+        setLoading(false)
     }).catch(e => {
       console.log(e)
-       setLoading(false)
+      setLoading(false)
     })
   }
 
+  const renderBody = () => {
+    return (
+      <React.Fragment>
+        {items.sort((a, b) => b.id - a.id).map((item, i) => {
+          return (
+            <tr key={i}>
+              <th scope="row" >{item.id}</th>
+              <td>{item.title}</td>
+              <td>{item.completed ? "Tamamlandı" : "Yapılacak"}</td>
+              <td>
+                <Button className="btn btn-xs btn-danger" onClick={() => onRemove(item.id)}>Sil</Button>
+                <Button className="btn btn-xs btn-warning" onClick={() => onEdit(item)}>Düzenle</Button>
+              </td>
+            </tr>
+          )
+        })}
+      </React.Fragment>
+    )
+  }
+
+  const renderTable = () => {
+    return (
+    <>
+      <Button onClick={onAdd}>Ekle</Button>
+      <table className="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Başlık</th>
+            <th scope="col">Durum</th>
+            <th scope="col">Aksiyonlar</th>
+          </tr>
+        </thead>
+        <tbody>
+          {renderBody()}
+        </tbody>
+      </table>
+    </>
+    )
+  }
+
+  const saveChanges = () => {
+
+    // insert 
+    if (todo && todo.id === -1) {
+      todo.id = Math.max(...items.map(item => item.id)) + 1;
+      setItems(items => {
+        items.push(todo)
+        return [...items]
+      })
+
+      alert("Ekleme işlemi başarıyla gerçekleşti.")
+      setTodo(null)
+      return
+    }
+    // update
+    const index = items.findIndex(item => item.id == todo.id)
+    setItems(items => {
+      items[index] = todo
+      return [...items]
+    })
+    setTodo(null)
+  }
+
+  const onAdd = () => {
+    setTodo({
+      id: -1,
+      title: "",
+      completed: false
+    })
+  }
 
   const onRemove = (id) => {
     const status = window.confirm("Silmek istediğinize emin misiniz?")
@@ -42,40 +115,10 @@ export function DataGrid() {
   const onEdit = (todo) => {
     setTodo(todo)
   }
-
-  const renderBody = () => {
-    return (
-      <React.Fragment>
-        {items.map((item, i) => {
-          return (
-            <tr key={i}>
-              <th scope="row" >{item.id}</th>
-              <td>{item.title}</td>
-              <td>{item.completed ? "completed" : "not completed"}</td>
-              <td>
-                <Button className="btn btn-xs btn-danger" onClick={() => onRemove(item.id)}>Remove</Button>
-                <Button className="btn btn-xs btn-warning" onClick={() => onEdit(item)}>Düzenle</Button>
-              </td>
-            </tr>
-          )
-        })}
-      </React.Fragment>
-    )
-  }
-
+  
   const cancel = () => {
     setTodo(null)
   }
-
-  const saveChanges = () => {
-    const index = items.findIndex(item => item.id == todo.id)
-    setItems(items => {
-      items[index] = todo
-      return [...items]
-    })
-    setTodo(null)
-  }
-
 
   const renderEditForm = () => {
     return (
@@ -100,23 +143,11 @@ export function DataGrid() {
       </>
     )
   }
-
-
-  console.log(todo)
-
+  
   return (
-    <table className="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Title</th>
-      <th scope="col">Completed</th>
-      <th scope="col">Actions</th>
-    </tr>
-  </thead>
-    <tbody>
-      { loading ? "Yükleniyor...." : (todo ? renderEditForm() : renderBody())}
-    </tbody>
-</table>
+    <>
+      { loading ? "Yükleniyor...." : (todo ? renderEditForm() : renderTable())}
+    
+    </>
   )
 }
