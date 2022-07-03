@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { useFetch } from "./hooks"
+import { useFetch } from "../hooks"
 
 
 function TableRow(props) {

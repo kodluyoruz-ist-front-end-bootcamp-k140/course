@@ -1,8 +1,8 @@
 import './App.css';
 import React, { useState } from 'react';
-import { FormRow } from "./components/form-row"
-import { ScreenSizeFn } from './components/screen-size';
-import { useDocumentTitle, useFormInput } from './hooks';
+import { FormRow } from "../components/form-row"
+import { ScreenSizeFn } from '../components/screen-size';
+import { useDocumentTitle, useFormInput } from '../hooks';
 // import { useDocumentTitle } from './hooks/use-document-title';
 // import { useFormInput } from './hooks/use-form-input';
 
