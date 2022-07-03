@@ -7,37 +7,37 @@
           "id": 5,
           "name": "Mojito ",
           "price": 17,
-          "image_url": "http://localhost:3000/images/mojito.jpeg"
+          "image_url": "http://localhost:4000/images/mojito.jpeg"
         },
         {
           "id": 6,
           "name": "Gökkuşağı",
           "price": 19,
-          "image_url": "http://localhost:3000/images/gokkusagi.png"
+          "image_url": "http://localhost:4000/images/gokkusagi.png"
         },
         {
           "id": 7,
           "name": "Churcill",
           "price": 10.9,
-          "image_url": "http://localhost:3000/images/churchill.png"
+          "image_url": "http://localhost:4000/images/churchill.png"
         },
         {
           "id": 8,
           "name": "Land Island",
           "price": 18,
-          "image_url": "http://localhost:3000/images/land-island.png"
+          "image_url": "http://localhost:4000/images/land-island.png"
         },
         {
           "id": 9,
           "name": "Orange Marry",
           "price": 19,
-          "image_url": "http://localhost:3000/images/orange-marry.png"
+          "image_url": "http://localhost:4000/images/orange-marry.png"
         },
         {
           "id": 10,
           "name": "Green Apple",
           "price": 18.9,
-          "image_url": "http://localhost:3000/images/green-apple.png"
+          "image_url": "http://localhost:4000/images/green-apple.png"
         }
       ]
   },
@@ -49,25 +49,25 @@
           "id": 2,
           "name": "Dondurmalı Waffle",
           "price": 40.9,
-          "image_url": "http://localhost:3000/images/dondurmali-waffle.png"
+          "image_url": "http://localhost:4000/images/dondurmali-waffle.png"
         },
         {
           "id": 4,
           "name": "Little Bitter",
           "price": 36.9,
-          "image_url": "http://localhost:3000/images/little-bitter.png"
+          "image_url": "http://localhost:4000/images/little-bitter.png"
         },
         {
           "id": 1,
           "name": "Classic Waffle",
           "price": 55,
-          "image_url": "http://localhost:3000/images/classic-waffle.png"
+          "image_url": "http://localhost:4000/images/classic-waffle.png"
         },
         {
           "id": 3,
           "name": "Little Sütlü ",
           "price": 36.9,
-          "image_url": "http://localhost:3000/images/little-sutlu.png"
+          "image_url": "http://localhost:4000/images/little-sutlu.png"
         }
       ]
   },
@@ -79,37 +79,37 @@
           "id": 11,
           "name": "Bol Malzemos Pizza",
           "price": 0,
-          "image_url": "http://localhost:3000/images/bol-mazemos.png"
+          "image_url": "http://localhost:4000/images/bol-mazemos.png"
         },
         {
           "id": 12,
           "name": "Karışık Pizza",
           "price": 0,
-          "image_url": "http://localhost:3000/images/karisik-pizza.png"
+          "image_url": "http://localhost:4000/images/karisik-pizza.png"
         },
         {
           "id": 13,
           "name": "Margaritta",
           "price": 0,
-          "image_url": "http://localhost:3000/images/margaritta.png"
+          "image_url": "http://localhost:4000/images/margaritta.png"
         },
         {
           "id": 14,
           "name": "Peynirli Pizza",
           "price": 0,
-          "image_url": "http://localhost:3000/images/peynirli-pizza.png"
+          "image_url": "http://localhost:4000/images/peynirli-pizza.png"
         },
         {
           "id": 15,
           "name": "Vaganza Pizza",
           "price": 0,
-          "image_url": "http://localhost:3000/images/vaganza-pizza.png"
+          "image_url": "http://localhost:4000/images/vaganza-pizza.png"
         },
         {
           "id": 15,
           "name": "İtalyano Pizza",
           "price": 0,
-          "image_url": "http://localhost:3000/images/italiano-pizza.png"
+          "image_url": "http://localhost:4000/images/italiano-pizza.png"
         }
       ]
   },
@@ -121,19 +121,19 @@
           "id": 11,
           "name": "Menengiç Kahvesi",
           "price": 13,
-          "image_url": "http://localhost:3000/images/menengic-kahvesi.png"
+          "image_url": "http://localhost:4000/images/menengic-kahvesi.png"
         },
         {
           "id": 13,
           "name": "Türk Kahvesi",
           "price": 13,
-          "image_url": "http://localhost:3000/images/turk-kahvesi.jpeg"
+          "image_url": "http://localhost:4000/images/turk-kahvesi.jpeg"
         },
         {
           "id": 12,
           "name": "Damla Sakızlı Kahve",
           "price": 13.59,
-          "image_url": "http://localhost:3000/images/turk-kahvesi.jpeg"
+          "image_url": "http://localhost:4000/images/turk-kahvesi.jpeg"
         }
       ]
   }

@@ -1,11 +1,19 @@
 import React from "react"
+import { Header } from "./components/header"
+import { Products } from "./components/products"
+import { ShoppingCart } from "./components/shopping-cart"
+import { AppProvider } from "./context"
+import "./example-app.css"
 
-
-// useMemo
 export default function () {
+  
   return (
-    <div>
-      app.js
-    </div>
+    <AppProvider>
+      <Header />
+      <div className="container example-app">
+        <Products />
+      </div>
+      <ShoppingCart />
+    </AppProvider>
   )
 }
