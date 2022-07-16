@@ -78,37 +78,37 @@
         {
           "id": 11,
           "name": "Bol Malzemos Pizza",
-          "price": 0,
+          "price": 65.50,
           "image_url": "http://localhost:4000/images/bol-mazemos.png"
         },
         {
           "id": 12,
           "name": "Karışık Pizza",
-          "price": 0,
+          "price": 65.50,
           "image_url": "http://localhost:4000/images/karisik-pizza.png"
         },
         {
           "id": 13,
           "name": "Margaritta",
-          "price": 0,
+          "price": 65.50,
           "image_url": "http://localhost:4000/images/margaritta.png"
         },
         {
           "id": 14,
           "name": "Peynirli Pizza",
-          "price": 0,
+          "price": 65.50,
           "image_url": "http://localhost:4000/images/peynirli-pizza.png"
         },
         {
           "id": 15,
           "name": "Vaganza Pizza",
-          "price": 0,
+          "price": 65.50,
           "image_url": "http://localhost:4000/images/vaganza-pizza.png"
         },
         {
           "id": 15,
           "name": "İtalyano Pizza",
-          "price": 0,
+          "price": 68.50,
           "image_url": "http://localhost:4000/images/italiano-pizza.png"
         }
       ]

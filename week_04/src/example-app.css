@@ -1,0 +1,20 @@
+
+.example-app {
+    padding-top: 50px;
+}
+.example-app .card {
+  margin-bottom: 40px;
+}
+.product-image {
+  height: 250px;
+}
+
+.example-app .card .card-body div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.example-app .card .card-body div span.price {
+    font-weight: 600;
+}
