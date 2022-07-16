@@ -43,7 +43,7 @@ export const ToastProvider = ({ children }) => {
 
     setTimeout(() => {
       hide()
-    }, 500);
+    }, 1000);
   }
   return (
     <AppToastContext.Provider value={{
