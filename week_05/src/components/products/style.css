@@ -1,0 +1,43 @@
+.searchbox {
+    border: 1px solid #dee2e6;
+    height: 60px;
+    border-radius: 40px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    margin-bottom: 40px;
+}
+
+.searchbox input.searchbox-input {
+    border: none;
+    height: 40px;
+    width: calc(100% - 50px);
+    border-image: none;
+    border-color: none;
+    background: transparent;
+    outline: none;
+}
+
+.searchbox span {
+  cursor: pointer;
+}
+
+.example-app .filter-icon {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    border-radius: 50%;
+    border: 1px solid #dee2e6;
+    cursor: pointer;
+}
+
+.show-category {
+    width: 100%;
+}
+.catagory-title-row {
+    margin-bottom: 20px;
+    padding-right: 0px;
+}

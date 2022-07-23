@@ -39,8 +39,10 @@ const sortOptions = {
   "price_asc": (a, b) => a.price - b.price,
   "price_desc": (a, b) => b.price - a.price,
 }
-
-server.get("/api/products", async (req, res) => {
+//api/products
+//api/products/1
+server.get("/api/products/:id?", async (req, res) => {
+  const categoryId = req.params["id"]
   const query = convertToEn(req.query["q"] || "")
   const sorting = req.query["sorting"] || "asc"
   
@@ -52,6 +54,10 @@ server.get("/api/products", async (req, res) => {
 
   let items = getProductsByCategory(data)
 
+  if (categoryId) {
+    items = items.filter(x => x.id === parseInt(categoryId))
+  }
+
   const stortingFn = sortOptions[sorting] || sortOptions.asc
 
   items = items.map(x => {
@@ -59,6 +65,13 @@ server.get("/api/products", async (req, res) => {
     return x
   })
   res.send(items)
+})
+
+server.get("/api/product/:id", async (req, res) => {
+  const id = parseInt(req.params["id"] || "0")
+  const items = await readFileAsync('db/products2.json')
+  const item = items.find(x => x.id === id)
+  res.send(item)
 })
 
 server.listen(PORT, () => {
